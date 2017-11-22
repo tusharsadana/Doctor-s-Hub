@@ -33,9 +33,16 @@ Add this line to all the pages where you need to maintain the session.
 
 Signup/Login Workflow:
 
-Create new user using signup.php form (note: validation occurs both client and server side)     Validation requires:        - Passwords to match and be at least 4 characters        - Valid email address        - Unique username
+Create new user using signup.php form (note: validation occurs both client and server side)   
+
+Validation requires:        - Passwords to match and be at least 4 characters        - Valid email address        - Unique username
+
 Password gets hashed and new GUID is generated for User ID
+
 User gets added to database as unverified
+
 Email is sent to user email (or $admin_email if set) with verification link
+
 User (or admin) clicks verification link which sends them to verifyuser.php and verifies user in the database
+
 Verified user may now log in
